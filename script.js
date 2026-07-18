@@ -128,7 +128,7 @@ musicToggle.addEventListener("click", () => {
 
 shareButton.addEventListener("click", async () => {
   const shareData = {
-    title: "A Letter for Jenny",
+    title: "A Letter for the Remarkable Jenny",
     text: "A message from the heart, sealed in wax.",
     url: window.location.href
   };
