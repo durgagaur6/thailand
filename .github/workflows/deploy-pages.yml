@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - deployment-status.json
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -41,3 +43,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Record successful deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          payload=$(printf '{"url":"%s","commit":"%s"}\n' "$PAGE_URL" "$GITHUB_SHA" | base64 -w 0)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/deployment-status.json" \
+            -f message="Record successful Pages deployment" \
+            -f content="$payload" \
+            -f branch="main"
