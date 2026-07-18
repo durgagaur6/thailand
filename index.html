@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4ead7">
+  <meta name="description" content="A sincere letter and a thoughtful coffee invitation for CA. Divya.">
+  <meta property="og:title" content="A Letter for CA. Divya">
+  <meta property="og:description" content="A message from the heart, sealed in wax.">
+  <title>A Letter for CA. Divya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#letter">Skip to the letter</a>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <div class="utility-controls" aria-label="Page controls">
+    <button class="round-control" id="musicToggle" type="button" aria-pressed="false" aria-label="Play gentle background music">
+      <svg class="icon-sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8H5v8h4l6 4V4L9 8Z"/><path d="M18 8.5a5 5 0 0 1 0 7"/></svg>
+      <svg class="icon-sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8H5v8h4l6 4V4L9 8Z"/><path d="m18 9 4 4m0-4-4 4"/></svg>
+    </button>
+    <button class="round-control" id="shareButton" type="button" aria-label="Share this letter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>
+    </button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <main id="app">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <span class="petal petal-one" aria-hidden="true"></span>
+      <span class="petal petal-two" aria-hidden="true"></span>
+      <span class="petal petal-three" aria-hidden="true"></span>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-heading reveal is-visible">
+        <div class="tiny-ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        <p class="eyebrow">A letter most sincere</p>
+        <h1 id="hero-title">Some words are meant<br><em>to be felt.</em></h1>
+        <p class="hero-tagline">A message from the heart, sealed in wax</p>
+      </div>
+
+      <button class="envelope-button reveal is-visible" id="openLetter" type="button" aria-expanded="false" aria-controls="letter">
+        <span class="envelope-shadow" aria-hidden="true"></span>
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope-back"></span>
+          <span class="letter-peek">
+            <span class="letter-peek-ornament">❦</span>
+            <span class="letter-peek-for">Especially for</span>
+            <strong>CA. Divya</strong>
+            <span class="letter-peek-heart">♡</span>
+          </span>
+          <span class="envelope-front-left"></span>
+          <span class="envelope-front-right"></span>
+          <span class="envelope-front-bottom"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal"><span>A</span></span>
+        </span>
+        <span class="open-prompt"><span id="openPromptText">Tap to open</span><i aria-hidden="true">↓</i></span>
+      </button>
+
+      <div class="hero-footer reveal is-visible">
+        <span>For CA. Divya</span>
+        <i aria-hidden="true">♡</i>
+        <span>A letter penned with intention</span>
+      </div>
+    </section>
+
+    <section class="letter-section" id="letter" aria-labelledby="letter-title">
+      <div class="section-kicker reveal"><span>01</span><i></i><span>The Letter</span></div>
+      <article class="letter-paper reveal">
+        <div class="paper-pin pin-left" aria-hidden="true"></div>
+        <div class="paper-pin pin-right" aria-hidden="true"></div>
+        <div class="letter-grid">
+          <figure class="portrait-wrap">
+            <div class="portrait-tape" aria-hidden="true"></div>
+            <div class="portrait-frame">
+              <img src="assets/portrait-placeholder.svg" alt="A warm placeholder for Divya's photograph">
+            </div>
+            <figcaption>One beautiful soul</figcaption>
+          </figure>
+
+          <div class="letter-copy">
+            <div class="letter-ornament" aria-hidden="true">❦</div>
+            <p class="eyebrow">With admiration</p>
+            <h2 id="letter-title">Ek meaningful safar<br>ki <em>shuruaat…</em></h2>
+            <p class="salutation">Dear Divya,</p>
+            <p>Kuch mulaqaatein bas calendar par ek date nahi hoti—woh ek nayi kahaani ka pehla, khoobsurat sa page hoti hain.</p>
+            <p>Main koi perfect speech ya grand promise lekar nahi aa raha. Bas ek honest intention: tumhe jaan-ne ka, tumhari baaton ko bina jaldi ke sun-ne ka, aur ek aisi conversation share karne ka jo coffee khatam hone ke baad bhi yaad rahe.</p>
+            <p>Shayad yeh sirf ek cup coffee ho. Ya shayad, kisi meaningful safar ki bahut simple si shuruaat.</p>
+            <div class="letter-signoff">
+              <span>With respect &amp; warm intentions,</span>
+              <strong>Someone who planned this with care</strong>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="scroll-note reveal" aria-hidden="true"><span>Keep reading</span><i>↓</i></div>
+    </section>
+
+    <section class="journey-section" id="journey" aria-labelledby="journey-title">
+      <div class="journey-image" role="img" aria-label="A couple sharing a quiet sunset beside a lake"></div>
+      <div class="journey-shade" aria-hidden="true"></div>
+      <div class="journey-content reveal">
+        <div class="section-kicker light"><span>02</span><i></i><span>A Thought</span></div>
+        <p class="eyebrow">The journey</p>
+        <h2 id="journey-title">The best stories begin<br>with a little <em>courage.</em></h2>
+        <div class="journey-rule" aria-hidden="true"><span>✦</span></div>
+        <p>There is something rare about an unhurried conversation—the kind where laughter comes easily, silences feel comfortable, and two people can simply be themselves.</p>
+        <p>No pressure. No pretence. Just good coffee, genuine respect, and the possibility of discovering a real connection—one thoughtful moment at a time.</p>
+      </div>
+      <blockquote class="journey-quote reveal">“A beautiful destination matters less than the person<br>you choose to walk beside.”</blockquote>
+    </section>
+
+    <section class="invitation-section" id="invitation" aria-labelledby="invite-title">
+      <div class="section-kicker reveal"><span>03</span><i></i><span>The Invitation</span></div>
+      <article class="invitation-card reveal">
+        <span class="corner corner-tl" aria-hidden="true"></span>
+        <span class="corner corner-tr" aria-hidden="true"></span>
+        <span class="corner corner-bl" aria-hidden="true"></span>
+        <span class="corner corner-br" aria-hidden="true"></span>
+        <div class="invite-topmark" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+        <p class="eyebrow">You are cordially invited to</p>
+        <h2 id="invite-title">An Invitation<br><em>to Remember</em></h2>
+        <p class="invite-intro">For a quiet evening, a warm cup, and a conversation worth having.</p>
+
+        <div class="invite-details">
+          <div class="detail-item">
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <span class="detail-label">Venue</span>
+            <strong>Tapri Central</strong>
+            <small>Where chai meets the city sky</small>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </span>
+            <span class="detail-label">When</span>
+            <strong><time datetime="2026-05-28T16:00">28 May 2026</time></strong>
+            <small>Thursday · 4:00 PM</small>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9Z"/><path d="M16 11h2a2.5 2.5 0 0 1 0 5h-2M8 5c0 1 1 1 1 2m3-2c0 1 1 1 1 2"/></svg>
+            </span>
+            <span class="detail-label">The plan</span>
+            <strong>Coffee &amp; Conversation</strong>
+            <small>Peaceful, genuine, unhurried</small>
+          </div>
+        </div>
+
+        <div class="invite-quote">
+          <span aria-hidden="true">“</span>
+          <p>Because the finest things in life<br>deserve to be savoured slowly.</p>
+          <span aria-hidden="true">”</span>
+        </div>
+        <p class="invite-signature">— A man with a plan. <span aria-hidden="true">🌸</span></p>
+      </article>
+    </section>
+
+    <section class="rsvp-section" id="rsvp" aria-labelledby="rsvp-title">
+      <div class="rsvp-flower flower-left" aria-hidden="true">❀</div>
+      <div class="rsvp-flower flower-right" aria-hidden="true">❀</div>
+      <div class="swan-pair" aria-hidden="true">
+        <svg viewBox="0 0 180 90"><path d="M88 72C76 46 57 24 39 26c-17 2-21 23-8 35 11 10 32 11 57 11Z"/><path d="M92 72c12-26 31-48 49-46 17 2 21 23 8 35-11 10-32 11-57 11Z"/><path d="M39 27c3-17 15-20 21-8 4 9-4 15-11 18m92-10c-3-17-15-20-21-8-4 9 4 15 11 18"/><path d="M77 38c9 2 13 8 13 16m13-16c-9 2-13 8-13 16"/></svg>
+        <span>♡</span>
+      </div>
+      <div class="rsvp-content reveal">
+        <p class="eyebrow">One little question remains</p>
+        <h2 id="rsvp-title">So, what say you,<br><em>CA. Divya?</em></h2>
+        <p class="rsvp-copy">No dramatic countdown, no fine print—just choose the answer that feels right.</p>
+        <div class="rsvp-actions" role="group" aria-label="RSVP choices">
+          <button class="rsvp-button primary" type="button" data-response="yes">
+            <span>I love this plan. I’m in.</span><i aria-hidden="true">♡</i>
+          </button>
+          <button class="rsvp-button secondary" type="button" data-response="maybe">
+            <span>Let me check my duty roster</span><i aria-hidden="true">↗</i>
+          </button>
+        </div>
+        <div class="rsvp-response" id="rsvpResponse" role="status" aria-live="polite"></div>
+        <div class="final-note">
+          <i aria-hidden="true"></i>
+          <p>Whatever your answer, thank you for reading this far.</p>
+          <i aria-hidden="true"></i>
+        </div>
+      </div>
+      <footer>
+        <span>Made with intention</span><span aria-hidden="true">·</span><span>For Divya</span><span aria-hidden="true">·</span><span id="year">2026</span>
+      </footer>
+    </section>
+  </main>
+  <div class="heart-burst" id="heartBurst" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
