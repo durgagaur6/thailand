@@ -37,7 +37,7 @@ function openLetter() {
   openButton.setAttribute("aria-expanded", "true");
   openPromptText.textContent = "Letter opened";
   document.body.classList.add("letter-is-open");
-  try { localStorage.setItem("divya-letter-opened", "true"); } catch (_) {}
+  try { localStorage.setItem("jenny-letter-opened", "true"); } catch (_) {}
 
   window.setTimeout(() => {
     letterSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -128,7 +128,7 @@ musicToggle.addEventListener("click", () => {
 
 shareButton.addEventListener("click", async () => {
   const shareData = {
-    title: "A Letter for CA. Divya",
+    title: "A Letter for Jenny",
     text: "A message from the heart, sealed in wax.",
     url: window.location.href
   };
@@ -183,12 +183,12 @@ responseButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const value = button.dataset.response;
     setResponse(value);
-    try { localStorage.setItem("divya-rsvp", value); } catch (_) {}
+    try { localStorage.setItem("jenny-rsvp", value); } catch (_) {}
   });
 });
 
 try {
-  const savedResponse = localStorage.getItem("divya-rsvp");
+  const savedResponse = localStorage.getItem("jenny-rsvp");
   if (["yes", "maybe"].includes(savedResponse)) setResponse(savedResponse, false);
 } catch (_) {}
 
